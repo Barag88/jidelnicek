@@ -42,23 +42,29 @@
                             <li class="nav-item">
                                     <a class="nav-link" href="/">Home</a>
                             </li>
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                                     <a class="nav-link" href="/blog">Blog</a>
-                            </li>
+                            </li> -->
                             <li class="nav-item">
                                     <a class="nav-link" href="/jidelnicek/create">Create</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/alergen/">Seznam alergenů</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/alergen/create">Přidej alergen</a>
+                            </li>
                         @guest
-                            @if (Route::has('login'))
+                            @if (Route::has('login'))<!--
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                </li>
+                                </li>-->
                             @endif
 
-                            @if (Route::has('register'))
+                            @if (Route::has('register'))<!--
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
+                                </li>-->
                             @endif
                         @else
                             <li class="nav-item dropdown">

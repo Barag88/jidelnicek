@@ -31,15 +31,15 @@
 
                 <div class="form-group">
                 <label>Datum</label>
-                <!-- <input type="date" name="datum" class="form-control"> -->
+                <input type="date" name="datum" class="form-control" value="{{ $data4[0]->datum }}" required>
 
-                <select name="datum" class="form-control" required>
+                <!-- <select name="datum" class="form-control" required>
                     <option value="1" @if ($data4->implode('datum') == 1) selected @endif>1</option>
                     <option value="2" @if ($data4->implode('datum') == 2) selected @endif>2</option>
                     <option value="3" @if ($data4->implode('datum') == 3) selected @endif>3</option>
                     <option value="4" @if ($data4->implode('datum') == 4) selected @endif>4</option>
                     <option value="5" @if ($data4->implode('datum') == 5) selected @endif>5</option>
-                </select>                
+                </select> -->               
 
                 </div> 
                     <br>

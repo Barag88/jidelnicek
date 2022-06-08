@@ -29,15 +29,15 @@
                 
                 <div class="form-group">
                 <label>Datum</label>
-                <!-- <input type="date" name="datum" class="form-control"> -->
+                <input type="date" name="datum" class="form-control" required>
 
-                <select name="datum" class="form-control" required>
+                <!-- <select name="datum" class="form-control" required>
                     <option value="1">1 (pondělí)</option>
                     <option value="2">2 (úterý)</option>
                     <option value="3">3 (středa)</option>
                     <option value="4">4 (čtvrtek)</option>
                     <option value="5">5 (pátek)</option>
-                </select>                
+                </select> -->                
 
                 </div> 
                     <br>

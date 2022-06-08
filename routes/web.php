@@ -5,6 +5,7 @@ use App\Http\Controllers\PagesController;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\Foods;
 use App\Http\Controllers\FoodController;
+use App\Http\Controllers\AlergenController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,6 +30,8 @@ Route::get('/', [Foods::class, 'dbOperations']);
 Route::resource('/blog', PostsController::class);
 
 Route::resource('/jidelnicek', FoodController::class);
+
+Route::resource('/alergen', AlergenController::class);
 
 Auth::routes();
 

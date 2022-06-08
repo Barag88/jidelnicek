@@ -4,14 +4,13 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <h3>Jídelníček </h3>
+            <h3>Seznam alergenů </h3>
         </div>
         <div class="col-md-8">
         @foreach ($data as $item)
 
-        {{ $item->foodId }}. <b>{{ $item->foodName }}</b> ({{ $item->alergen ?? 'bez alergenů'}}) - {{date('j.n. Y', strtotime($item->datum))}}
-        
-        &nbsp; <a href="/jidelnicek/{{ $item->foodId }}/edit">Edituj</a> | <form action="/jidelnicek/{{ $item->foodId }}" method="POST" style="display: inline">
+        {{ $item->alergen_id }}. {{ $item->alergen_name }}     
+        &nbsp; <a href="/alergen/{{ $item->alergen_id }}/edit">Edituj</a> | <form action="/alergen/{{ $item->alergen_id }}" method="POST" style="display: inline">
                                         @csrf
                                         @method('delete')
                                         <button type="submit" class="link-danger" style="border: none;
