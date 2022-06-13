@@ -14,7 +14,7 @@
                 <label>Jídlo</label>
                 <input type="text" name="jidlo" class="form-control" required>
                 </div>    
-                <input type="hidden" name="ajdy" value="{{ $data2->id }}">
+                <input type="hidden" name="ajdy" value="{{ $data2->id ?? 0 }}">
                 <div class="form-group">
                 <label>Alergeny</label>
                 <select multiple name="alergen[]" class="form-control" size="6" required>

@@ -14,7 +14,7 @@
                 <label>Alergen</label>
                 <input type="text" name="alergen" class="form-control" required>
                 </div>
-                <input type="hidden" name="ajdy" value="{{ $data2->id }}">  
+                <input type="hidden" name="ajdy" value="{{ $data2->id ?? 0 }}">  
         
  
                     <br>

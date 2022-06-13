@@ -7,6 +7,9 @@
             <h3>Seznam alergenů </h3>
         </div>
         <div class="col-md-8">
+        @if ($data->isEmpty())
+            V databázy nejsou žádné alergeny.
+        @else
         @foreach ($data as $item)
 
         {{ $item->alergen_id }}. {{ $item->alergen_name }}     
@@ -24,6 +27,7 @@
                                     </form><br>
         
         @endforeach
+        @endif
     </div>
 </div>
 @endsection

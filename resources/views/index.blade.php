@@ -7,6 +7,12 @@
             <h3>Jídelníček </h3>
         </div>
         <div class="col-md-8">
+
+        @if($data->isEmpty())
+            V databázy nejsou žádná jídla.
+            
+        @else
+
         @foreach ($data as $item)
 
         {{ $item->foodId }}. <b>{{ $item->foodName }}</b> ({{ $item->alergen ?? 'bez alergenů'}}) - {{date('j.n. Y', strtotime($item->datum))}}
@@ -25,6 +31,8 @@
                                     </form><br>
         
         @endforeach
+
+        @endif
     </div>
 </div>
 @endsection

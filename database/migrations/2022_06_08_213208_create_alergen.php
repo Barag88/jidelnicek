@@ -19,6 +19,29 @@ class CreateAlergen extends Migration
             $table->increments('id');
             $table->timestamps();
         });
+
+        Schema::create('datumy', function (Blueprint $table) {
+            $table->increments('id');
+            $table->date('datum');
+            $table->unsignedinteger('food_id');
+            $table->timestamps();
+        });
+
+        Schema::create('food', function (Blueprint $table) {
+            $table->unsignedinteger('food_id');
+            $table->string('food_name');
+            $table->increments('id');
+            $table->timestamps();
+        });
+
+        Schema::create('pivot_alergen_food', function (Blueprint $table) {
+            $table->increments('id');
+            $table->unsignedinteger('food_id');
+            $table->unsignedinteger('alergen_id');
+            $table->timestamps();
+        });
+
+
     }
 
     /**
